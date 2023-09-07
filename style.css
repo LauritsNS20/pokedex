@@ -1,0 +1,20 @@
+*{
+    background-color: red;
+}
+
+.pokemonSearchBar {
+   
+}
+
+.pokemonButton {
+    background-color: white;
+}
+
+.pokedexTitle {
+    padding-left: 32%;
+    padding-top: 8%;
+}
+
+.pokedexDiv {
+    padding-left: 35%;
+}
