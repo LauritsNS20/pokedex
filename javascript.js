@@ -1,6 +1,12 @@
-fetch("https://pokeapi.co/api/v2/pokemon")
+const URL = new URLSearchParams(window.location.search)
+const OFFSET = parseInt(URL.get("offset") || "0")
+const NEXT_PAGE  = document.querySelector(".nextPage")
+
+NEXT_PAGE.href = `/?offset=${OFFSET + 20}`
+
+fetch(`https://pokeapi.co/api/v2/pokemon?offset=${OFFSET}`)
 .then(function(response) {
-  if (response.status === 200) {
+  if (response.status === 200) { 
     return response.json()
   } else {
     document.body.innerText += "fejl ikke nogen pokemon til dig"
@@ -14,6 +20,7 @@ fetch("https://pokeapi.co/api/v2/pokemon")
         UL.append(LI)
     })
 })
+
 
 
 
