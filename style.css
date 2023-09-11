@@ -3,17 +3,27 @@
 }
 
 .pokemonSearchBar {
-    background-color: white;
+    background-color: #ffcb05;
+    
 }
 
 .pokemonButton {
-    background-color: white;
+    background-color: #ffcb05;
+    
 }
 
 .pokedexTitle {
-    padding-top: 10%;
+    color:#ffcb05;
+   
 }
 
 .pokedexDiv {
-    padding-left: 35%;
+    padding-left: 40%;
+}
+
+.pokedexLogo {
+    width: 500px;
+    height: 200px;
+    position: relative;
+    right: 160px;
 }
