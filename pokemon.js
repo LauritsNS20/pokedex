@@ -15,7 +15,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
     const DIV = document.querySelector(".pokemon")
     DIV.innerHTML = `
     <h1>${data.name}</h1> 
-   <span class=""imagePlaceholder>
+   <span class="imagePlaceholder">
     <svg height="210" width="500"><polygon points="200,10 250,190 160,210"></svg>
     </span>
     <p>Height: ${data.height}</p>
@@ -25,9 +25,10 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
       ).join("")}</ul>`
 
       const IMG = new Image()
-      IMG.SRC = data.sprites.other["official-artwork"].front_default
+      IMG.src = data.sprites.other["official-artwork"].front_default
 
       IMG.onload = function() {
+        DIV.querySelector(".imagePlaceholder svg").style.display = "none"
         DIV.querySelector(".imagePlaceholder").append(IMG)
       }
   })
