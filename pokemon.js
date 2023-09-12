@@ -1,5 +1,7 @@
 const URL = new URLSearchParams(window.location.search)
 
+//
+
 fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
 .then(function(response) {
     if (response.status === 200) {
@@ -9,6 +11,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
     }
   })
   .then(function(data) {
+   //
     const DIV = document.querySelector(".pokemon")
     DIV.innerHTML = `
     <h1>${data.name}</h1> 
