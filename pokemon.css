@@ -1,7 +1,15 @@
 * {
-    background-color: #2a75bb;
+    margin: 0;
+    padding: 0;
 }
 
-.pokemonDiv {
-    padding-left: 30%;
+.background {
+    position: absolute;
+    min-width: 100%;
+}
+.background img {
+    width: 100%;
+}
+.relative {
+    position: relative;
 }
