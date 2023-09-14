@@ -8,14 +8,25 @@
 </head>
 <body>
     <div class="pokedexDiv">
-        <section>
+        <form>
             <img src="pictures/pokemonLogo.png" alt="pokemonLogo" class="pokedexLogo">
             <h1 class="pokedexTitle">who is that pokemon?</h1>
-            <input type="text" class="pokemonSearchBar" placeholder="Search for pokemon">
-            <button class="pokemonButton">Search</button>
-            <ul class="pokemonList"></ul>
-            <a href="" class="lastPage">previous</a> | <a href="" class="nextPage">next</a>
-        </section>
+
+            <label>
+                <input type="search" class="pokemonSearchBar" placeholder="Search for pokemon" id="pokemonData">
+                <datalist id="pokemonData">
+                    <option>Firefox</option>
+                    <option>Chrome</option>
+                    <option>Edge</option>
+                    <option>Opera</option>
+                    <option>Safari</option>
+                </datalist>
+            </label>
+            
+                 <button class="pokemonButton">Search</button>
+                 <ul class="pokemonList"></ul>
+                 <a href="" class="lastPage">previous</a> | <a href="" class="nextPage">next</a>
+      </form>
     </div>
 
     
