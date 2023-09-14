@@ -15,11 +15,22 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
     const DIV = document.querySelector(".pokemon")
     DIV.innerHTML = `
     <h1>${data.name}</h1> 
-    <img src="${(data.sprites.other["official-artwork"].front_default)}">
+   <span class="imagePlaceholder">
+    <svg height="210" width="500"><polygon points="200,10 250,190 160,210"></svg>
+    </span>
     <p>Height: ${data.height}</p>
     <p>Abilities</p>
     <ul>${data.abilities.map(
       elem => `<li>${elem.ability.name}</li>`
       ).join("")}</ul>`
+
+      const IMG = new Image()
+      IMG.src = data.sprites.other["official-artwork"].front_default
+
+      IMG.onload = function() {
+        DIV.querySelector(".imagePlaceholder svg").style.display = "none"
+        DIV.querySelector(".imagePlaceholder").append(IMG)
+      }
   })
-  
+
+  //<img src="${(data.sprites.other["official-artwork"].front_default)}">
