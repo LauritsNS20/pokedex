@@ -5,9 +5,9 @@ const LAST_PAGE = document.querySelector(".lastPage")
 
 fetch(`https://pokeapi.co/api/v2/pokemon?offset=${OFFSET}`)
   .then(function(response) { 
-  //if (response.status !== 200) 
-    throw new Error("404") 
-   return response.json()
+  if (response.status !== 200) 
+  throw new Error("404") 
+  return response.json()
 })
 .then(function(data) {
 
