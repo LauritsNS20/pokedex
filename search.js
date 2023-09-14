@@ -6,8 +6,6 @@ POKEMONSEARCHBAR.addEventListener("focusout", function(event) {
 POKEMONSEARCHBAR.removeEventListener("focus", getDatalist)
 })
 
-
-
 function getDatalist(event) {
 fetch("https://pokeapi.co/api/v2/pokemon?limit=10000")
 .then(function(response) {
