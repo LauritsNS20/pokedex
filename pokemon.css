@@ -26,3 +26,22 @@
     padding-left: 6%;
 }
 
+.heightOfPokemon{
+   padding-left: 20%;
+   font-size: larger;
+}
+
+.pokemonName {
+    padding-left: 18%;
+    font-size: xx-large;
+}
+
+.attacks {
+    padding-left: 20%;
+    font-size: large;
+}
+
+.aNames {
+    padding-left: 20%;
+    list-style-type: none;
+}

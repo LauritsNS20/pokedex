@@ -14,14 +14,14 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${URL.get("name")}`)
    //
     const DIV = document.querySelector(".pokemon")
     DIV.innerHTML =  `
-    <h1>${data.name}</h1> 
+    <h1 class="pokemonName">${data.name}</h1> 
    <span class="imagePlaceholder">
     <svg height="210" width="500"><polygon points="200,10 250,190 160,210"></svg>
     </span>
-    <p>Height: ${data.height}</p>
-    <p>Abilities</p class="abilities">
+    <p class="heightOfPokemon">Height: ${data.height}</p>
+    <p class="attacks">Abilities</p>
     <ul>${data.abilities.map(
-      elem => `<li>${elem.ability.name}</li>`
+      elem => `<li class="aNames">${elem.ability.name}</li>`
       ).join("")}</ul>`
 
       const IMG = new Image()
